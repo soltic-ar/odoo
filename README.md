@@ -32,8 +32,8 @@ from the documentation.
 
 Then follow <a href="https://www.odoo.com/documentation/master/tutorials.html">the developer tutorials</a>
 
-Pulling a new branch
-  git fetch <original_remote_name>
-  git checkout <new_branch>
-  git merge <original_remote_name>/<new_branch>
-  git push <original_remote_name> <new_branch>
+Pulling a new branch:  
+  - git fetch <original_remote_name>  
+  - git checkout <new_branch>  
+  - git merge <original_remote_name>/<new_branch>  
+  - git push <original_remote_name> <new_branch>  
