@@ -1181,6 +1181,20 @@ $.summernote.pluginEvents.enter = function (event, editor, layoutInfo) {
 
     var br = $("<br/>")[0];
 
+    // set selection outside of A if range is at beginning or end
+    var elem = dom.isBR(elem) ? elem.parentNode : dom.node(r.sc);
+    if (elem.tagName === "A") {
+        if (r.so === 0 && dom.firstChild(elem) === r.sc) {
+            r.ec = r.sc = dom.hasContentBefore(elem) || $(dom.createText('')).insertBefore(elem)[0];
+            r.eo = r.so = dom.nodeLength(r.sc);
+            r.select();
+        } else if (dom.nodeLength(r.sc) === r.so && dom.lastChild(elem) === r.sc) {
+            r.ec = r.sc = dom.hasContentAfter(elem) || dom.insertAfter(dom.createText(''), elem);
+            r.eo = r.so = 0;
+            r.select();
+        }
+    }
+
     var node;
     var $node;
     var $clone;
@@ -2096,14 +2110,16 @@ $.summernote.pluginEvents.applyFont = function (event, editor, layoutInfo, color
     }
 
     // apply font: foreColor, backColor, size (the color can be use a class text-... or bg-...)
-    var font, $font, fonts = [], className;
+    var ancestors, font, $font, fonts = [], className;
     var i;
     if (color || bgcolor || size) {
       for (i=0; i<nodes.length; i++) {
         node = nodes[i];
 
-        font = dom.ancestor(node, dom.isFont);
-        if (!font) {
+        ancestors = dom.listAncestor(node, dom.isFont);
+        font = ancestors.slice(-1)[0];
+        // add font if node is not inside a font or inside an anchor firstly
+        if (!dom.isFont(font) || ancestors.filter(dom.isAnchor).length) {
           if (node.textContent.match(/^[ ]|[ ]$/)) {
             node.textContent = node.textContent.replace(/^[ ]|[ ]$/g, '\u00A0');
           }
@@ -2185,11 +2201,15 @@ $.summernote.pluginEvents.applyFont = function (event, editor, layoutInfo, color
     }
 
     // select nodes to clean (to remove empty font and merge same nodes)
-    nodes = [];
+    var walkpointNodes = [];
+    var lastNode = null;
     dom.walkPoint(startPoint, endPoint, function (point) {
-      nodes.push(point.node);
+        if (lastNode !== point.node) {
+            nodes.push(point.node);
+            lastNode = point.node;
+        }
     });
-    nodes = list.unique(nodes);
+    nodes = list.unique(walkpointNodes);
 
     function remove(node, to) {
       if (node === endPoint.node) {
@@ -2209,6 +2229,7 @@ $.summernote.pluginEvents.applyFont = function (event, editor, layoutInfo, color
       if ((dom.isText(node) || dom.isBR(node)) && !dom.isVisibleText(node)) {
         remove(node);
         nodes.splice(i,1);
+        walkpointNodes = _.without(walkpointNodes, node);
         i--;
         continue;
       }
@@ -2227,6 +2248,7 @@ $.summernote.pluginEvents.applyFont = function (event, editor, layoutInfo, color
       if (!className && !style) {
         remove(node, node.parentNode);
         nodes.splice(i,1);
+        walkpointNodes = _.without(walkpointNodes, node);
         i--;
         continue;
       }
@@ -2237,6 +2259,7 @@ $.summernote.pluginEvents.applyFont = function (event, editor, layoutInfo, color
         if (node !== font && className === className2 && style === style2) {
           remove(node, font);
           nodes.splice(i,1);
+          walkpointNodes = _.without(walkpointNodes, node);
           i--;
           continue;
         }
@@ -2284,7 +2307,7 @@ $.summernote.pluginEvents.backColor = function (event, editor, layoutInfo, backC
 
 options.onCreateLink = function (sLinkUrl) {
     if (sLinkUrl.indexOf('mailto:') === 0 || sLinkUrl.indexOf('tel:') === 0) {
-      // pass
+      sLinkUrl = sLinkUrl.replace(/^tel:([0-9]+)$/, 'tel://$1');
     } else if (sLinkUrl.indexOf('@') !== -1 && sLinkUrl.indexOf(':') === -1) {
       sLinkUrl =  'mailto:' + sLinkUrl;
     } else if (sLinkUrl.indexOf('://') === -1 && sLinkUrl[0] !== '/'

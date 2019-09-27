@@ -1978,7 +1978,7 @@ msgstr ""
 "판매 주문에 판매 작업기록 허용\n"
 "=============================================\n"
 "\n"
-"이 모듈은 귀하의 주문/계약서에 따라 작업하는 모든 작업 기록  행에\n"
+"이 모듈은 귀하의 주문/계약서에 따라 작업하는 모든 작업 기록  명세에\n"
 "올바른 제품을 설정합니다. 이를 통해\n"
 "판매 주문에서 실제 납품된 수량을 볼 수 있습니다.\n"
 
@@ -6921,9 +6921,9 @@ msgstr ""
 "\n"
 "각 직원은 서로 다른 프로젝트에 소요된 시간을 작성하고 추적할 수 있습니다.\n"
 "\n"
-"시간 및 직원 추적에 대한 많은 보고서를 제공됩니다.\n"
+"정기 보고 및 직원 추적에 대해 많은 보고서가 제공됩니다.\n"
 "\n"
-"원가 계산 모듈과 완전히 통합됩니다.\n"
+"원가 회계 모듈과 완전히 통합됩니다.\n"
 "사무 설정을 통해 관리할 수 있습니다.\n"
 "    "
 
@@ -10239,6 +10239,12 @@ msgid "Barcode scan in Mobile"
 msgstr "모바일 바코드 스캔"
 
 #. module: base
+#: code:addons/base/models/ir_qweb_fields.py:607
+#, python-format
+msgid "Barcode symbology"
+msgstr ""
+
+#. module: base
 #: code:addons/base/models/ir_qweb_fields.py:603
 #, python-format
 msgid "Barcode type"
@@ -10640,22 +10646,22 @@ msgstr "C5E 24  163 x 229 mm"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm
 msgid "CRM"
-msgstr "고객 관계 관리(CRM)"
+msgstr "고객 관계 관리"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_gamification_sale_crm
 msgid "CRM Gamification"
-msgstr "고객 관계 관리(CRM) 업적 시스템"
+msgstr "고객 관계 관리 업적 시스템"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_livechat
 msgid "CRM Livechat"
-msgstr "고객 관계 관리(CRM) 실시간 채팅"
+msgstr "고객 관계 관리 실시간 채팅"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_crm_enterprise
 msgid "CRM enterprise"
-msgstr "고객 관계 관리(CRM) 유료버전"
+msgstr "고객 관계 관리 유료버전"
 
 #. module: base
 #: selection:base.language.export,format:0
@@ -10774,6 +10780,12 @@ msgstr "업그레이드 취소"
 #, python-format
 msgid "Cannot aggregate field %r."
 msgstr "%r 필드를 집계할 수 없습니다."
+
+#. module: base
+#: code:addons/base/models/ir_translation.py:256
+#, python-format
+msgid "Cannot be translated; record not accessible."
+msgstr ""
 
 #. module: base
 #: code:addons/base/models/res_lang.py:228
@@ -11101,7 +11113,7 @@ msgstr "클라이언트 동작 태그"
 #: model_terms:ir.ui.view,arch_db:base.view_base_module_update
 #: model_terms:ir.ui.view,arch_db:base.wizard_lang_export
 msgid "Close"
-msgstr "마감"
+msgstr "닫기"
 
 #. module: base
 #: model:res.country,name:base.cc
@@ -13447,12 +13459,12 @@ msgstr "행사 관리"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event
 msgid "Events Organization"
-msgstr "행사 주최자"
+msgstr "행사 구성"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event_enterprise
 msgid "Events Organization Add-on"
-msgstr "행사 주최자 추가"
+msgstr "행사 구성 추가"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_event_sale
@@ -16409,7 +16421,7 @@ msgstr "청구서 및 결제"
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_account
 msgid "Invoices from Documents"
-msgstr "청구서 문서"
+msgstr "문서 상 청구서"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account
@@ -21817,7 +21829,7 @@ msgstr "Paypal 결제 매입사"
 #: model:ir.module.category,name:base.module_category_hr_payroll
 #: model:ir.module.module,shortdesc:base.module_hr_payroll
 msgid "Payroll"
-msgstr "급여"
+msgstr "급여 관리"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_payroll_account
@@ -22133,7 +22145,7 @@ msgstr "제품 유효 기간"
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_product
 msgid "Products from Documents"
-msgstr "제품 문서"
+msgstr "문서에 기재된 제품"
 
 #. module: base
 #: model:res.partner.title,shortcut:base.res_partner_title_prof
@@ -22290,7 +22302,7 @@ msgstr ""
 #. module: base
 #: model:ir.module.module,summary:base.module_documents_project
 msgid "Project from documents"
-msgstr "프로젝트의 문서"
+msgstr "문서에 기재된 프로젝트"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_helpdesk_sale_timesheet
@@ -24477,7 +24489,7 @@ msgstr "대상 창"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_timesheet
 msgid "Task Logs"
-msgstr "작업 로그"
+msgstr "업무 기록"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_l10n_mx_tax_cash_basis
@@ -28329,8 +28341,8 @@ msgstr "예 : ko_KR"
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_address_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
-msgid "e.g. www.odoo.com"
-msgstr "예 : www.odoo.com"
+msgid "e.g. https://www.odoo.com"
+msgstr ""
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_sale_ebay

@@ -28,33 +28,35 @@ msgid ""
 "<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
 "specific.\"/>"
 msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\"/>"
 
 #. module: snailmail
 #: code:addons/snailmail/models/snailmail_letter.py:249
 #, python-format
 msgid "An error occured when sending the document by post.<br>Error: %s"
-msgstr ""
+msgstr "កំហុសមួយបានកើតឡើងនៅពេលផ្ញើឯកសារតាមប្រៃសណីយ៍។ <br>កំហុស៖%s"
 
 #. module: snailmail
 #: code:addons/snailmail/models/snailmail_letter.py:215
 #, python-format
 msgid "An unknown error happened. Please contact the support."
-msgstr ""
+msgstr "កំហុសមិនស្គាល់បានកើតឡើង។ សូមទាក់ទងជំនួយ។"
 
 #. module: snailmail
 #: model:ir.model.fields,field_description:snailmail.field_snailmail_letter__attachment_id
 msgid "Attachment"
-msgstr ""
+msgstr "ឯកសារ​ភ្ជាប់"
 
 #. module: snailmail
 #: model:ir.model.fields,field_description:snailmail.field_snailmail_letter__duplex
 msgid "Both side"
-msgstr ""
+msgstr "ទាំងសងខាង"
 
 #. module: snailmail
 #: model:ir.model.fields,field_description:snailmail.field_res_company__snailmail_duplex
 msgid "Both sides"
-msgstr ""
+msgstr "ទាំងសងខាង"
 
 #. module: snailmail
 #: model_terms:ir.ui.view,arch_db:snailmail.snailmail_letter_form
@@ -64,12 +66,12 @@ msgstr "លុបចោល"
 #. module: snailmail
 #: selection:snailmail.letter,state:0
 msgid "Canceled"
-msgstr ""
+msgstr "លុបចោល"
 
 #. module: snailmail
 #: model_terms:ir.ui.view,arch_db:snailmail.res_config_settings_view_form
 msgid "Choose the ink used to print documents"
-msgstr ""
+msgstr "ជ្រើសរើសទឹកថ្នាំដែលប្រើសម្រាប់បោះពុម្ពឯកសារ។"
 
 #. module: snailmail
 #: model_terms:ir.ui.view,arch_db:snailmail.res_config_settings_view_form
@@ -80,7 +82,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:snailmail.field_res_company__snailmail_color
 #: model:ir.model.fields,field_description:snailmail.field_snailmail_letter__color
 msgid "Color"
-msgstr ""
+msgstr "ព័ណ៍"
 
 #. module: snailmail
 #: model:ir.model,name:snailmail.model_res_company
@@ -145,7 +147,7 @@ msgstr ""
 #. module: snailmail
 #: model:ir.model.fields,field_description:snailmail.field_snailmail_letter__info_msg
 msgid "Information"
-msgstr ""
+msgstr "ពត៌មាន"
 
 #. module: snailmail
 #: model:ir.model.fields,field_description:snailmail.field_snailmail_letter____last_update
@@ -172,7 +174,7 @@ msgstr ""
 #. module: snailmail
 #: model:ir.model.fields,field_description:snailmail.field_snailmail_letter__model
 msgid "Model"
-msgstr ""
+msgstr "ម៉ូដែល"
 
 #. module: snailmail
 #: code:addons/snailmail/models/snailmail_letter.py:211
@@ -214,7 +216,7 @@ msgstr ""
 #. module: snailmail
 #: model:ir.model.fields,field_description:snailmail.field_snailmail_letter__partner_id
 msgid "Recipient"
-msgstr ""
+msgstr "ការទទួល"
 
 #. module: snailmail
 #: model:ir.model,name:snailmail.model_ir_actions_report
@@ -224,12 +226,12 @@ msgstr ""
 #. module: snailmail
 #: model_terms:ir.ui.view,arch_db:snailmail.snailmail_letter_form
 msgid "Send Now"
-msgstr ""
+msgstr "ការផ្ញើរឥឡូវ"
 
 #. module: snailmail
 #: selection:snailmail.letter,state:0
 msgid "Sent"
-msgstr ""
+msgstr "បានផ្ងើរ"
 
 #. module: snailmail
 #: model:ir.model,name:snailmail.model_snailmail_letter

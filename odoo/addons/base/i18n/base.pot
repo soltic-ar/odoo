@@ -6703,6 +6703,12 @@ msgid "Barcode scan in Mobile"
 msgstr ""
 
 #. module: base
+#: code:addons/base/models/ir_qweb_fields.py:607
+#, python-format
+msgid "Barcode symbology"
+msgstr ""
+
+#. module: base
 #: code:addons/base/models/ir_qweb_fields.py:603
 #, python-format
 msgid "Barcode type"
@@ -7232,6 +7238,12 @@ msgstr ""
 #: code:addons/models.py:2118
 #, python-format
 msgid "Cannot aggregate field %r."
+msgstr ""
+
+#. module: base
+#: code:addons/base/models/ir_translation.py:256
+#, python-format
+msgid "Cannot be translated; record not accessible."
 msgstr ""
 
 #. module: base
@@ -22107,7 +22119,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:base.view_company_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_address_form
 #: model_terms:ir.ui.view,arch_db:base.view_partner_form
-msgid "e.g. www.odoo.com"
+msgid "e.g. https://www.odoo.com"
 msgstr ""
 
 #. module: base

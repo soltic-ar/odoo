@@ -4,7 +4,7 @@
 # 
 # Translators:
 # Francesco Garganese <francesco.garganese@aeromnia.aero>, 2018
-# Sebastiano Pistore <SebastianoPistore.info@protonmail.ch>, 2018
+# SebastianoPistore <SebastianoPistore.info@protonmail.ch>, 2018
 # Christian <chris@effeci.info>, 2018
 # Giovanni Perteghella <giovanni@perteghella.org>, 2018
 # Lorenzo Battistini <lorenzo.battistini@agilebg.com>, 2018
@@ -14,8 +14,8 @@
 # David Minneci <david@numeko.it>, 2018
 # Paolo Valier, 2018
 # Martin Trigaux, 2018
-# Sergio Zanchetta <primes2h@gmail.com>, 2019
 # Léonie Bouchat <lbo@odoo.com>, 2019
+# Sergio Zanchetta <primes2h@gmail.com>, 2019
 # 
 msgid ""
 msgstr ""
@@ -23,7 +23,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-29 10:10+0000\n"
 "PO-Revision-Date: 2018-08-24 09:34+0000\n"
-"Last-Translator: Léonie Bouchat <lbo@odoo.com>, 2019\n"
+"Last-Translator: Sergio Zanchetta <primes2h@gmail.com>, 2019\n"
 "Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,8 +53,8 @@ msgid ""
 "&amp;nbsp;&amp;nbsp;<i class=\"fa fa-times\" title=\"Close\" role=\"img\" "
 "aria-label=\"Close\"/>&amp;nbsp;&amp;nbsp;"
 msgstr ""
-"&amp;nbsp;&amp;nbsp;<i class=\"fa fa-times\" title=\"Close\" role=\"img\" "
-"aria-label=\"Chiudi\"/>&amp;nbsp;&amp;nbsp;"
+"&amp;nbsp;&amp;nbsp;<i class=\"fa fa-times\" title=\"Chiudi\" role=\"img\" "
+"aria-label=\"Close\"/>&amp;nbsp;&amp;nbsp;"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.header
@@ -181,7 +181,7 @@ msgid ""
 "    your answers as they tend to dilute the essence of questions and answers. For\n"
 "    brief discussions please use commenting facility."
 msgstr ""
-"<b>Le risposte non devono avviare dibattiti.</b>\n"
+"<b>Le risposte non devono avviare dibattiti</b>.\n"
 "    Questa comunità D&R non è un gruppo di discussione. Evitare di alimentare dibattiti nelle\n"
 "    risposte, rischiano di diluire l'essenza stessa delle domande e delle risposte. Per\n"
 "    discussioni brevi, usare la funzione commenti."
@@ -659,13 +659,13 @@ msgstr ""
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_post_template_new_answer
 msgid "A new answer on"
-msgstr "Una nuova risposta a"
+msgstr "Pubblicata una nuova risposta a '"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_post_template_new_question
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_post_template_validation
 msgid "A new question"
-msgstr "Nuova domanda"
+msgstr "Pubblicata una nuova domanda in"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.tag
@@ -1147,7 +1147,7 @@ msgstr "Fare clic su <em>Continua</em> per creare il forum."
 #: code:addons/website_forum/static/src/js/website_tour_forum.js:73
 #, python-format
 msgid "Click here to accept this answer."
-msgstr "Fare clic qui per accettare questa risposta"
+msgstr "Fare clic per accettare questa risposta."
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.header
@@ -1282,7 +1282,7 @@ msgid ""
 "Congratulations! Your email has just been validated. You may now participate"
 " to our forums."
 msgstr ""
-"Congratulazioni! L'email è stata confermata. Da ora in poi è possibile "
+"Congratulazioni, l'email è stata confermata. Da ora in poi è possibile "
 "partecipare ai nostri forum."
 
 #. module: website_forum
@@ -1758,7 +1758,7 @@ msgstr "Messaggio del forum"
 #: model:ir.actions.act_window,name:website_forum.action_forum_post
 #: model_terms:ir.ui.view,arch_db:website_forum.view_forum_post_list
 msgid "Forum Posts"
-msgstr "Messaggi nel forum"
+msgstr "Messaggi del forum"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.header
@@ -1933,7 +1933,7 @@ msgstr "Se selezionato, nuovi messaggi richiedono attenzione."
 #: model:ir.model.fields,help:website_forum.field_forum_post__message_has_error
 #: model:ir.model.fields,help:website_forum.field_forum_tag__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Se selezionato, alcuni messaggi presentano un errore di consegna. "
+msgstr "Se selezionato, alcuni messaggi presentano un errore di consegna."
 
 #. module: website_forum
 #: model:ir.model.fields,help:website_forum.field_forum_forum__karma_dofollow
@@ -2105,7 +2105,7 @@ msgstr "Ultimo aggiornamento"
 #: model:ir.model.fields,field_description:website_forum.field_forum_post_vote__write_uid
 #: model:ir.model.fields,field_description:website_forum.field_forum_tag__write_uid
 msgid "Last Updated by"
-msgstr "Ultima modifica di"
+msgstr "Ultimo aggiornamento di"
 
 #. module: website_forum
 #: model:ir.model.fields,field_description:website_forum.field_forum_forum__write_date
@@ -2113,7 +2113,7 @@ msgstr "Ultima modifica di"
 #: model:ir.model.fields,field_description:website_forum.field_forum_post_vote__write_date
 #: model:ir.model.fields,field_description:website_forum.field_forum_tag__write_date
 msgid "Last Updated on"
-msgstr "Ultima modifica il"
+msgstr "Ultimo aggiornamento il"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_index
@@ -2799,12 +2799,12 @@ msgstr "Secondo parametro di rilevanza"
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_post_template_new_answer
 msgid "See post"
-msgstr "Vedi messaggio"
+msgstr "Visualizza messaggio"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_post_template_new_question
 msgid "See question"
-msgstr "Vedi domanda"
+msgstr "Visualizza domanda"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.header
@@ -3465,7 +3465,7 @@ msgid ""
 "    measure of the community trust to him/her. Various moderation tasks are\n"
 "    gradually assigned to the users based on those points."
 msgstr ""
-"Quando una domando o una risposta ottiene un voto positivo, l'utente che l'ha pubblicata\n"
+"Quando una domanda o una risposta ottiene un voto positivo, l'utente che l'ha pubblicata\n"
 "    guadagna alcuni punti chiamati \"punti karma\". È una misura approssimativa\n"
 "    della fiducia riposta dalla comunità in questa persona e servono anche per\n"
 "    assegnare in modo graduale varie attività di moderazione."
@@ -3653,8 +3653,7 @@ msgstr ""
 #: model_terms:forum.forum,faq:website_forum.forum_help
 msgid "every answer is equally valid: “What’s your favorite ______?”"
 msgstr ""
-"tutte le risposte sono ugualmente valide: \"Qual'è il tuo  ______ "
-"preferito?\""
+"tutte le risposte sono ugualmente valide: “Qual'è il tuo  ______ preferito?”"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.faq
@@ -3697,18 +3696,18 @@ msgid ""
 "has been posted and require your validation. Click here to access the "
 "question :"
 msgstr ""
-"è stato pubblicata e richiede una conferma. Fare clic qui per accedere alla "
+"è stato pubblicata e richiede una conferma. Fare clic per accedere alla "
 "domanda:"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_post_template_new_answer
 msgid "has been posted. Click here to access the post :"
-msgstr "è stato pubblicata. Fare clic qui per accedere al messaggio:"
+msgstr "'. Fare clic per accedere al messaggio:"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.forum_post_template_new_question
 msgid "has been posted. Click here to access the question :"
-msgstr "è stato pubblicata. Fare clic qui per accedere alla domanda:"
+msgstr "'. Fare clic per accedere alla domanda:"
 
 #. module: website_forum
 #. openerp-web
@@ -3762,7 +3761,7 @@ msgstr "linguaggio insultante e offensivo"
 #. module: website_forum
 #: model_terms:forum.forum,faq:website_forum.forum_help
 msgid "it is a rant disguised as a question: “______ sucks, am I right?”"
-msgstr "è una invettiva mascherata da domanda: \"_____ fa schifo, giusto?\""
+msgstr "è una invettiva mascherata da domanda: “_____ fa schifo, giusto?”"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.user_detail_full
@@ -3812,7 +3811,7 @@ msgstr "fuori tema o non rilevante"
 #: model_terms:ir.ui.view,arch_db:website_forum.post_comment
 #: model_terms:ir.ui.view,arch_db:website_forum.post_description_full
 msgid "on"
-msgstr "il"
+msgstr "sul"
 
 #. module: website_forum
 #. openerp-web
@@ -3856,8 +3855,8 @@ msgid ""
 "there is no actual problem to be solved: “I’m curious if other people feel "
 "like I do.”"
 msgstr ""
-"non ci sono reali problemi da risolvere: \"Sono curioso di sapere se altri "
-"la pensano come me.\""
+"non ci sono reali problemi da risolvere: “Sono curioso di sapere se altri la"
+" pensano come me.”"
 
 #. module: website_forum
 #: model:forum.post.reason,name:website_forum.reason_14
@@ -3915,8 +3914,8 @@ msgid ""
 "we are being asked an open-ended, hypothetical question: “What if ______ "
 "happened?”"
 msgstr ""
-"viene posta una domanda aperta e ipotetica: \"Che cosa accadrebbe se ______ "
-"?\""
+"viene posta una domanda aperta e ipotetica: “Che cosa accadrebbe se ______ "
+"?”"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.user_detail_full
@@ -3937,7 +3936,7 @@ msgid ""
 "answers: “I use ______ for ______, what do you use?”"
 msgstr ""
 "la risposta è fornita insieme alla domanda, e si attendono ulteriori "
-"risposte: \"Io uso_____ per ______, voi cosa usate?"
+"risposte: “Io uso_____ per ______, voi cosa usate”?"
 
 #. module: website_forum
 #: model_terms:ir.ui.view,arch_db:website_forum.faq
