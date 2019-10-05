@@ -55,6 +55,7 @@ class SetupBarBankConfigWizard(models.TransientModel):
     new_journal_name = fields.Char(compute='compute_new_journal_related_data', inverse='set_linked_journal_id', required=True, help='Will be used to name the Journal related to this bank account')
     linked_journal_id = fields.Many2one(string="Journal", comodel_name='account.journal', compute='compute_linked_journal_id', inverse='set_linked_journal_id')
     new_journal_code = fields.Char(string="Code", required=True, default=lambda self: self.env['account.journal'].get_next_bank_cash_default_code('bank', self.env['res.company']._company_default_get('account.journal').id))
+    name = fields.Char()
 
     # field computing the type of the res.patrner.bank. It's behaves the same as a related res_part_bank_id.acc_type
     # except we want to display  this information while the record isn't yet saved.
