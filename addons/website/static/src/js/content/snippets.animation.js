@@ -502,6 +502,7 @@ registry.slider = publicWidget.Widget.extend({
 
 registry.parallax = Animation.extend({
     selector: '.parallax',
+    disabledInEditableMode: false,
     effects: [{
         startEvents: 'scroll',
         update: '_onWindowScroll',
@@ -554,11 +555,13 @@ registry.parallax = Animation.extend({
 
         // Reset offset if parallax effect will not be performed and leave
         this.$target.toggleClass('s_parallax_is_fixed', this.speed === 1);
-        if (this.speed === 0 || this.speed === 1) {
+        var noParallaxSpeed = (this.speed === 0 || this.speed === 1);
+        this.$target.toggleClass('s_parallax_no_overflow_hidden', noParallaxSpeed);
+        if (noParallaxSpeed) {
             this.$bg.css({
                 transform: '',
                 top: '',
-                bottom: ''
+                bottom: '',
             });
             return;
         }

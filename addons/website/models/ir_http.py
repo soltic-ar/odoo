@@ -193,7 +193,12 @@ class Http(models.AbstractModel):
         context['website_id'] = request.website.id
         # This is mainly to avoid access errors in website controllers where there is no
         # context (eg: /shop), and it's not going to propagate to the global context of the tab
-        context['allowed_company_ids'] = [request.website.company_id.id]
+        # If the company of the website is not in the allowed companies of the user, set the main
+        # company of the user.
+        if request.website.company_id in request.env.user.company_ids:
+            context['allowed_company_ids'] = request.website.company_id.ids
+        else:
+            context['allowed_company_ids'] = request.env.user.company_id.ids
 
         # modify bound context
         request.context = dict(request.context, **context)
@@ -202,6 +207,13 @@ class Http(models.AbstractModel):
 
         if request.routing_iteration == 1:
             request.website = request.website.with_context(request.context)
+
+    @classmethod
+    def _get_frontend_langs(cls):
+        if get_request_website():
+            return [code for code, _, _ in request.env['res.lang'].get_available()]
+        else:
+            return super()._get_frontend_langs()
 
     @classmethod
     def _get_default_lang(cls):
@@ -269,8 +281,8 @@ class Http(models.AbstractModel):
     def _get_exception_code_values(cls, exception):
         code, values = super(Http, cls)._get_exception_code_values(exception)
         if request.website.is_publisher() and isinstance(exception, werkzeug.exceptions.NotFound):
-            code = 'page_404'
             values['path'] = request.httprequest.path[1:]
+            values['force_template'] = 'website.page_404'
         return (code, values)
 
     @classmethod
@@ -304,8 +316,8 @@ class Http(models.AbstractModel):
 
     @classmethod
     def _get_error_html(cls, env, code, values):
-        if code == 'page_404':
-            return env['ir.ui.view'].render_template('website.%s' % code, values)
+        if values.get('force_template'):
+            return env['ir.ui.view'].render_template(values['force_template'], values)
         return super(Http, cls)._get_error_html(env, code, values)
 
     def binary_content(self, xmlid=None, model='ir.attachment', id=None, field='datas',
